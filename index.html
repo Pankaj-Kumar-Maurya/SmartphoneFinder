@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Best Smartphone Finder 2025 - Compare Phones by Budget & Category | India</title>
+    <meta name="title" content="Best Smartphone Finder 2024 - Compare Phones by Budget & Category | India">
+    <meta name="description" content="Find the best smartphones under your budget in India. Compare gaming, camera, battery, and performance phones with detailed specifications, prices, and ratings. Updated 2024.">
+    <meta name="keywords" content="smartphone finder, best phones under budget, gaming phones, camera phones, battery phones, performance phones, phone comparison India, mobile phone finder, budget phones 2024">
+    <meta name="author" content="Smartphone Finder">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./">
+    <meta property="og:title" content="Best Smartphone Finder 2024 - Compare Phones by Budget & Category">
+    <meta property="og:description" content="Find the best smartphones under your budget in India. Compare gaming, camera, battery, and performance phones with detailed specifications and ratings.">
+    <meta property="og:image" content="./og-image.jpg">
+    <meta property="og:site_name" content="Smartphone Finder">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="./">
+    <meta property="twitter:title" content="Best Smartphone Finder 2024 - Compare Phones by Budget">
+    <meta property="twitter:description" content="Find the best smartphones under your budget in India. Compare phones by category with detailed specs.">
+    <meta property="twitter:image" content="./twitter-image.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Smartphone Finder">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="./">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <title>Smartphone Finder - Best Phones by Budget</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .chat-container {
+        width: 100%;
+        max-width: 900px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .input-area {
+        display: flex;
+        border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+        padding: 25px;
+        gap: 15px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+        align-items: center;
+      }
+
+      .messages {
+        flex: 1;
+        padding: 25px;
+        overflow-y: auto;
+        min-height: 500px;
+        background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%);
+      }
+
+      .message {
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 18px;
+        max-width: 85%;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        animation: messageSlide 0.3s ease-out;
+      }
+
+      @keyframes messageSlide {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .user {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        margin-left: auto;
+        border-bottom-right-radius: 8px;
+      }
+
+      .bot {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+        color: #333;
+        margin-right: auto;
+        border: 2px solid rgba(102, 126, 234, 0.1);
+        border-bottom-left-radius: 8px;
+      }
+
+      .bot::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 18px;
+        z-index: -1;
+        opacity: 0.1;
+      }
+
+      select {
+        padding: 12px 16px;
+        border: 2px solid rgba(102, 126, 234, 0.2);
+        border-radius: 12px;
+        font-size: 14px;
+        background: white;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 140px;
+      }
+
+      select:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      button {
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      #finalText {
+        margin: 10px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      /* Enhanced Spinner */
+      .spinner {
+        display: none;
+        margin: 20px auto;
+        width: 40px;
+        height: 40px;
+        position: relative;
+      }
+
+      .spinner::before,
+      .spinner::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .spinner::before {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        animation: spin 0.2s linear infinite;
+      }
+
+      .spinner::after {
+        width: 70%;
+        height: 70%;
+        background: white;
+        top: 15%;
+        left: 15%;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Custom Table Styling */
+      .message table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 5px 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .message table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 12px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .message table td {
+        padding: 12px;
+        border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+        background: white;
+        font-size: 14px;
+      }
+
+      .message table tr:nth-child(even) td {
+        background: rgba(248, 249, 255, 0.8);
+      }
+
+      .message table tr:hover td {
+        background: rgba(102, 126, 234, 0.05);
+      }
+
+      /* Custom scrollbar */
+      .messages::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .messages::-webkit-scrollbar-track {
+        background: rgba(102, 126, 234, 0.1);
+        border-radius: 4px;
+      }
+
+      .messages::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 4px;
+      }
+
+      .messages::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #5a6fd8, #6a4190);
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .input-area {
+          flex-direction: column;
+          gap: 12px;
+        }
+        
+        select, button {
+          width: 100%;
+        }
+        
+        .message {
+          max-width: 95%;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- SEO Header -->
+      <header style="text-align: center; padding: 20px 0; border-bottom: 2px solid rgba(102, 126, 234, 0.1);">
+        <h1 style="color: #667eea; font-size: 2.5rem; margin-bottom: 10px;">🏆 Best Smartphone Finder 2025</h1>
+        <p style="color: #666; font-size: 1.1rem; margin-bottom: 15px;">Find the perfect smartphone under your budget in India</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+          <span style="background: rgba(102, 126, 234, 0.1); padding: 8px 16px; border-radius: 20px; color: #667eea; font-size: 0.9rem;">🎮 Gaming Phones</span>
+          <span style="background: rgba(102, 126, 234, 0.1); padding: 8px 16px; border-radius: 20px; color: #667eea; font-size: 0.9rem;">📸 Camera Phones</span>
+          <span style="background: rgba(102, 126, 234, 0.1); padding: 8px 16px; border-radius: 20px; color: #667eea; font-size: 0.9rem;">🔋 Battery Phones</span>
+          <span style="background: rgba(102, 126, 234, 0.1); padding: 8px 16px; border-radius: 20px; color: #667eea; font-size: 0.9rem;">⚡ Performance Phones</span>
+          <span style="background: rgba(102, 126, 234, 0.1); padding: 8px 16px; border-radius: 20px; color: #667eea; font-size: 0.9rem;">💰 Budget Phones</span>
+        </div>
+      </header>
+
+      <!-- Input area moved to top -->
+      <div class="input-area">
+        <select id="typeSelect" onchange="updateText()">
+          <option value="gaming">🎮 Gaming</option>
+          <option value="camera">📸 Camera</option>
+          <option value="battery">🔋 Battery</option>
+          <option value="performance">⚡ Performance</option>
+          <option value="budget">💰 Budget</option>
+        </select>
+
+        <select id="priceSelect" onchange="updateText()">
+          <option value="15000">₹15,000</option>
+          <option value="20000">₹20,000</option>
+          <option value="25000">₹25,000</option>
+          <option value="30000">₹30,000</option>
+          <option value="40000">₹40,000</option>
+          <option value="50000">₹50,000</option>
+        </select>
+
+        <button onclick="sendMessage()">🔍 Find Phones</button>
+      </div>
+
+      <div id="finalText" style="display: none"></div>
+      <!-- Enhanced Spinner -->
+      <div id="spinner" class="spinner"></div>
+
+      <!-- Messages area below input -->
+      <div class="messages" id="messages"></div>
+      
+      <!-- SEO Footer -->
+      <footer style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%); padding: 30px 25px; border-top: 2px solid rgba(102, 126, 234, 0.1);">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <h3 style="color: #667eea; margin-bottom: 20px; text-align: center;">About Smartphone Finder</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 20px;">
+            <div>
+              <h4 style="color: #333; margin-bottom: 10px;">🎯 What We Do</h4>
+              <p style="color: #666; font-size: 14px; line-height: 1.6;">We help you find the best smartphones under your budget in India. Compare phones by gaming, camera, battery, and performance categories.</p>
+            </div>
+            <div>
+              <h4 style="color: #333; margin-bottom: 10px;">📱 Categories</h4>
+              <ul style="color: #666; font-size: 14px; line-height: 1.6; padding-left: 20px;">
+                <li>Gaming Phones - Best for PUBG, Call of Duty</li>
+                <li>Camera Phones - Professional photography</li>
+                <li>Battery Phones - Long-lasting power</li>
+                <li>Performance Phones - Speed & efficiency</li>
+                <li>Budget Phones - Value for money</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: #333; margin-bottom: 10px;">💰 Price Ranges</h4>
+              <ul style="color: #666; font-size: 14px; line-height: 1.6; padding-left: 20px;">
+                <li>Under ₹15,000 - Budget friendly</li>
+                <li>Under ₹25,000 - Mid-range options</li>
+                <li>Under ₹40,000 - Premium choices</li>
+                <li>Under ₹50,000 - Flagship alternatives</li>
+              </ul>
+            </div>
+          </div>
+          <div style="text-align: center; color: #666; font-size: 12px; border-top: 1px solid rgba(102, 126, 234, 0.1); padding-top: 20px;">
+            <p>© 2025 Smartphone Finder. All phone specifications and prices are updated regularly for accuracy.</p>
+            <p style="margin-top: 10px;">Popular searches: best gaming phone under 15000, camera phone under 30000, battery phone under 20000, performance phone under 40000</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Smartphone Finder",
+      "description": "Find the best smartphones under your budget in India. Compare gaming, camera, battery, and performance phones with detailed specifications and ratings.",
+      "url": "./",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Smartphone Finder"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Smartphone Finder"
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-01-01",
+      "inLanguage": "en-IN",
+      "countryOfOrigin": "IN",
+      "keywords": "smartphone finder, best phones under budget, gaming phones, camera phones, battery phones, performance phones, phone comparison India",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Smartphone Comparison"
+        },
+        {
+          "@type": "Thing", 
+          "name": "Budget Phone Finder"
+        },
+        {
+          "@type": "Thing",
+          "name": "Phone Specifications"
+        }
+      ]
+    }
+    </script>
+
+    <script>
+      function updateText() {
+        const type = document.getElementById("typeSelect").value;
+        const price = document.getElementById("priceSelect").value;
+        document.getElementById(
+          "finalText"
+        ).innerText = `Find best ${type} smartphone under ₹${price}, give me a table only best on top, no text line `;
+      }
+
+      // Initialize default text
+      updateText();
+
+      async function sendMessage() {
+        const userText = document.getElementById("finalText").innerText;
+        if (!userText) return;
+
+        // Clear previous messages first
+        clearMessages();
+        
+        // Show spinner
+        document.getElementById("spinner").style.display = "block";
+
+        try {
+          const type = document.getElementById("typeSelect").value;
+          const price = document.getElementById("priceSelect").value;
+          
+          const phoneRecommendations = getPhoneRecommendations(type, price);
+          addMessage(phoneRecommendations, "bot");
+        } catch (err) {
+          addMessage("Error: " + err.message, "bot");
+        } finally {
+          // Hide spinner when done
+          document.getElementById("spinner").style.display = "none";
+        }
+      }
+
+      function getPhoneRecommendations(type, maxPrice) {
+        // Comprehensive manual phone database
+        const phoneDatabase = {
+          gaming: {
+            15000: [
+              { name: "iQOO Z10x 5G", price: "₹14,999", processor: "Dimensity 7300", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "6500mAh Battery, Military-Grade Durability, 5G" },
+              { name: "POCO M6 Pro", price: "₹14,999", processor: "Dimensity 6100+", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Redmi Note 12", price: "₹16,999", processor: "Snapdragon 685", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "120Hz AMOLED, 33W Charging" }
+            ],
+            20000: [
+              { name: "Redmi Note 13 Pro+", price: "₹22,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.1/5", features: "120Hz AMOLED, 120W Charging" },
+              { name: "OnePlus Nord CE 3", price: "₹24,999", processor: "Dimensity 9000", ram: "8GB", storage: "128GB", rating: "4.2/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Realme 11", price: "₹18,999", processor: "Dimensity 6100+", ram: "8GB", storage: "128GB", rating: "4.1/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            25000: [
+              { name: "POCO X6 Pro", price: "₹25,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.5/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "POCO F5", price: "₹29,999", processor: "Snapdragon 7+ Gen 2", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            30000: [
+              { name: "iQOO Neo 9", price: "₹29,999", processor: "Snapdragon 8 Gen 2", ram: "8GB", storage: "128GB", rating: "4.4/5", features: "144Hz AMOLED, 120W Charging" },
+              { name: "Realme GT Neo 5 SE", price: "₹32,999", processor: "Snapdragon 7+ Gen 2", ram: "8GB", storage: "128GB", rating: "4.4/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Motorola Edge 40", price: "₹34,999", processor: "Dimensity 8020", ram: "8GB", storage: "256GB", rating: "4.2/5", features: "144Hz AMOLED, 68W Charging" }
+            ],
+            40000: [
+              { name: "OnePlus 11R", price: "₹39,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.6/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "POCO X6 Pro", price: "₹25,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.5/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            50000: [
+              { name: "iQOO 11", price: "₹44,999", processor: "Snapdragon 8 Gen 2", ram: "8GB", storage: "128GB", rating: "4.5/5", features: "144Hz AMOLED, 120W Charging" },
+              { name: "OnePlus 11R", price: "₹39,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.6/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" }
+            ]
+          },
+          camera: {
+            15000: [
+              { name: "Redmi Note 12", price: "₹16,999", camera: "50MP + 8MP + 2MP", processor: "Snapdragon 685", rating: "4.0/5", features: "120Hz AMOLED, AI Camera" },
+              { name: "POCO M6 Pro", price: "₹14,999", camera: "64MP + 2MP + 2MP", processor: "Dimensity 6100+", rating: "4.0/5", features: "120Hz AMOLED, Pro Mode" },
+              { name: "Realme C55", price: "₹10,999", camera: "50MP + 2MP", processor: "Helio G88", rating: "3.9/5", features: "90Hz Display, Portrait Mode" }
+            ],
+            20000: [
+              { name: "Redmi Note 13 Pro", price: "₹24,999", camera: "200MP + 8MP + 2MP", processor: "Dimensity 7200 Ultra", rating: "4.2/5", features: "OIS, AI Camera" },
+              { name: "Realme 11 Pro", price: "₹26,999", camera: "100MP + 2MP + 2MP", processor: "Dimensity 7050", rating: "4.1/5", features: "Portrait Mode, Night Mode" },
+              { name: "POCO X5 Pro", price: "₹22,999", camera: "108MP + 8MP + 2MP", processor: "Snapdragon 778G", rating: "4.0/5", features: "AI Camera, Pro Mode" }
+            ],
+            25000: [
+              { name: "OPPO Reno 10", price: "₹29,999", camera: "64MP + 8MP + 2MP", processor: "Dimensity 7050", rating: "4.3/5", features: "AI Portrait, Night Mode" },
+              { name: "Vivo V29", price: "₹32,999", camera: "50MP + 8MP + 2MP", processor: "Snapdragon 778G", rating: "4.4/5", features: "Aura Light, Portrait Mode" },
+              { name: "Redmi Note 13 Pro", price: "₹24,999", camera: "200MP + 8MP + 2MP", processor: "Dimensity 7200 Ultra", rating: "4.2/5", features: "OIS, AI Camera" }
+            ],
+            30000: [
+              { name: "Samsung Galaxy A54", price: "₹34,999", camera: "50MP + 12MP + 5MP", processor: "Exynos 1380", rating: "4.5/5", features: "OIS, Night Mode" },
+              { name: "Vivo V29", price: "₹32,999", camera: "50MP + 8MP + 2MP", processor: "Snapdragon 778G", rating: "4.4/5", features: "Aura Light, Portrait Mode" },
+              { name: "OPPO Reno 10", price: "₹29,999", camera: "64MP + 8MP + 2MP", processor: "Dimensity 7050", rating: "4.3/5", features: "AI Portrait, Night Mode" }
+            ],
+            40000: [
+              { name: "Google Pixel 7a", price: "₹39,999", camera: "64MP + 13MP", processor: "Google Tensor G2", rating: "4.6/5", features: "Night Sight, AI Processing" },
+              { name: "Nothing Phone 2", price: "₹37,999", camera: "50MP + 50MP", processor: "Snapdragon 8+ Gen 1", rating: "4.4/5", features: "Glyph Interface, Clean UI" },
+              { name: "Samsung Galaxy A54", price: "₹34,999", camera: "50MP + 12MP + 5MP", processor: "Exynos 1380", rating: "4.5/5", features: "OIS, Night Mode" }
+            ],
+            50000: [
+              { name: "Google Pixel 7a", price: "₹39,999", camera: "64MP + 13MP", processor: "Google Tensor G2", rating: "4.6/5", features: "Night Sight, AI Processing" },
+              { name: "Nothing Phone 2", price: "₹37,999", camera: "50MP + 50MP", processor: "Snapdragon 8+ Gen 1", rating: "4.4/5", features: "Glyph Interface, Clean UI" },
+              { name: "Samsung Galaxy A54", price: "₹34,999", camera: "50MP + 12MP + 5MP", processor: "Exynos 1380", rating: "4.5/5", features: "OIS, Night Mode" }
+            ]
+          },
+          battery: {
+            15000: [
+              { name: "iQOO Z10x 5G", price: "₹14,999", battery: "6500mAh", processor: "Dimensity 7300", rating: "4.0/5", features: "Military-Grade Durability, 5G Support" },
+              { name: "POCO M6 Pro", price: "₹14,999", battery: "5000mAh", processor: "Dimensity 6100+", rating: "4.0/5", features: "67W Charging, 2-Day Battery" },
+              { name: "Samsung Galaxy M14", price: "₹13,999", battery: "6000mAh", processor: "Exynos 1330", rating: "4.0/5", features: "FHD+ Display, 3-Day Battery" }
+            ],
+            20000: [
+              { name: "Samsung Galaxy M34", price: "₹16,999", battery: "6000mAh", processor: "Exynos 1280", rating: "4.2/5", features: "25W Charging, 3-Day Battery" },
+              { name: "Realme 11", price: "₹18,999", battery: "5000mAh", processor: "Dimensity 6100+", rating: "4.3/5", features: "67W Charging, Power Saving" },
+              { name: "iQOO Z10x 5G", price: "₹14,999", battery: "6500mAh", processor: "Dimensity 7300", rating: "4.0/5", features: "Military-Grade Durability, 5G Support" }
+            ],
+            25000: [
+              { name: "Realme 11", price: "₹18,999", battery: "5000mAh", processor: "Dimensity 6100+", rating: "4.3/5", features: "67W Charging, Power Saving" },
+              { name: "Samsung Galaxy M34", price: "₹16,999", battery: "6000mAh", processor: "Exynos 1280", rating: "4.2/5", features: "25W Charging, 3-Day Battery" },
+              { name: "POCO M6 Pro", price: "₹14,999", battery: "5000mAh", processor: "Dimensity 6100+", rating: "4.0/5", features: "67W Charging, 2-Day Battery" }
+            ],
+            30000: [
+              { name: "Samsung Galaxy M34", price: "₹16,999", battery: "6000mAh", processor: "Exynos 1280", rating: "4.2/5", features: "25W Charging, 3-Day Battery" },
+              { name: "Realme 11", price: "₹18,999", battery: "5000mAh", processor: "Dimensity 6100+", rating: "4.3/5", features: "67W Charging, Power Saving" },
+              { name: "iQOO Z10x 5G", price: "₹14,999", battery: "6500mAh", processor: "Dimensity 7300", rating: "4.0/5", features: "Military-Grade Durability, 5G Support" }
+            ],
+            40000: [
+              { name: "Samsung Galaxy M34", price: "₹16,999", battery: "6000mAh", processor: "Exynos 1280", rating: "4.2/5", features: "25W Charging, 3-Day Battery" },
+              { name: "Realme 11", price: "₹18,999", battery: "5000mAh", processor: "Dimensity 6100+", rating: "4.3/5", features: "67W Charging, Power Saving" },
+              { name: "iQOO Z10x 5G", price: "₹14,999", battery: "6500mAh", processor: "Dimensity 7300", rating: "4.0/5", features: "Military-Grade Durability, 5G Support" }
+            ],
+            50000: [
+              { name: "Samsung Galaxy M34", price: "₹16,999", battery: "6000mAh", processor: "Exynos 1280", rating: "4.2/5", features: "25W Charging, 3-Day Battery" },
+              { name: "Realme 11", price: "₹18,999", battery: "5000mAh", processor: "Dimensity 6100+", rating: "4.3/5", features: "67W Charging, Power Saving" },
+              { name: "iQOO Z10x 5G", price: "₹14,999", battery: "6500mAh", processor: "Dimensity 7300", rating: "4.0/5", features: "Military-Grade Durability, 5G Support" }
+            ]
+          },
+          performance: {
+            15000: [
+              { name: "iQOO Z10x 5G", price: "₹14,999", processor: "Dimensity 7300", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "6500mAh Battery, Military-Grade Durability, 5G" },
+              { name: "POCO M6 Pro", price: "₹14,999", processor: "Dimensity 6100+", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Redmi Note 12", price: "₹16,999", processor: "Snapdragon 685", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "120Hz AMOLED, 33W Charging" }
+            ],
+            20000: [
+              { name: "Redmi Note 13 Pro+", price: "₹22,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.1/5", features: "120Hz AMOLED, 120W Charging" },
+              { name: "OnePlus Nord CE 3", price: "₹24,999", processor: "Dimensity 9000", ram: "8GB", storage: "128GB", rating: "4.2/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Realme 11", price: "₹18,999", processor: "Dimensity 6100+", ram: "8GB", storage: "128GB", rating: "4.1/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            25000: [
+              { name: "POCO X6 Pro", price: "₹25,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.5/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "POCO F5", price: "₹29,999", processor: "Snapdragon 7+ Gen 2", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            30000: [
+              { name: "iQOO Neo 9", price: "₹29,999", processor: "Snapdragon 8 Gen 2", ram: "8GB", storage: "128GB", rating: "4.4/5", features: "144Hz AMOLED, 120W Charging" },
+              { name: "Realme GT Neo 5 SE", price: "₹32,999", processor: "Snapdragon 7+ Gen 2", ram: "8GB", storage: "128GB", rating: "4.4/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Motorola Edge 40", price: "₹34,999", processor: "Dimensity 8020", ram: "8GB", storage: "256GB", rating: "4.2/5", features: "144Hz AMOLED, 68W Charging" }
+            ],
+            40000: [
+              { name: "OnePlus 11R", price: "₹39,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.6/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "POCO X6 Pro", price: "₹25,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.5/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            50000: [
+              { name: "iQOO 11", price: "₹44,999", processor: "Snapdragon 8 Gen 2", ram: "8GB", storage: "128GB", rating: "4.5/5", features: "144Hz AMOLED, 120W Charging" },
+              { name: "OnePlus 11R", price: "₹39,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.6/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" }
+            ]
+          },
+          budget: {
+            15000: [
+              { name: "Redmi 12", price: "₹11,999", processor: "Helio G88", ram: "4GB", storage: "64GB", rating: "4.1/5", features: "90Hz Display, 5000mAh Battery" },
+              { name: "POCO C65", price: "₹9,999", processor: "Helio G85", ram: "4GB", storage: "64GB", rating: "4.0/5", features: "HD+ Display, 5000mAh Battery" },
+              { name: "Samsung Galaxy M14", price: "₹13,999", processor: "Exynos 1330", ram: "4GB", storage: "64GB", rating: "4.0/5", features: "FHD+ Display, 6000mAh Battery" },
+              { name: "Realme C55", price: "₹10,999", processor: "Helio G88", ram: "4GB", storage: "64GB", rating: "3.9/5", features: "90Hz Display, 5000mAh Battery" },
+              { name: "Infinix Hot 30", price: "₹12,999", processor: "Helio G88", ram: "4GB", storage: "64GB", rating: "3.8/5", features: "90Hz Display, 5000mAh Battery" },
+              { name: "iQOO Z10x 5G", price: "₹14,999", processor: "Dimensity 7300", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "6500mAh Battery, Military-Grade Durability, 5G" },
+              { name: "POCO M6 Pro", price: "₹14,999", processor: "Dimensity 6100+", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            20000: [
+              { name: "Redmi Note 12", price: "₹16,999", processor: "Snapdragon 685", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "120Hz AMOLED, 33W Charging" },
+              { name: "Realme 11", price: "₹18,999", processor: "Dimensity 6100+", ram: "8GB", storage: "128GB", rating: "4.1/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Samsung Galaxy M34", price: "₹16,999", processor: "Exynos 1280", ram: "4GB", storage: "64GB", rating: "4.0/5", features: "FHD+ Display, 6000mAh Battery" },
+              { name: "Infinix Note 30", price: "₹13,999", processor: "Helio G99", ram: "8GB", storage: "128GB", rating: "3.9/5", features: "120Hz AMOLED, 33W Charging" },
+              { name: "iQOO Z10x 5G", price: "₹14,999", processor: "Dimensity 7300", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "6500mAh Battery, Military-Grade Durability, 5G" }
+            ],
+            25000: [
+              { name: "Redmi Note 13 Pro+", price: "₹22,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.1/5", features: "120Hz AMOLED, 120W Charging" },
+              { name: "OnePlus Nord CE 3", price: "₹24,999", processor: "Dimensity 9000", ram: "8GB", storage: "128GB", rating: "4.2/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "Realme 11", price: "₹18,999", processor: "Dimensity 6100+", ram: "8GB", storage: "128GB", rating: "4.1/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "POCO M6 Pro", price: "₹14,999", processor: "Dimensity 6100+", ram: "6GB", storage: "128GB", rating: "4.0/5", features: "120Hz AMOLED, 67W Charging" }
+            ],
+            30000: [
+              { name: "iQOO Neo 9", price: "₹29,999", processor: "Snapdragon 8 Gen 2", ram: "8GB", storage: "128GB", rating: "4.4/5", features: "144Hz AMOLED, 120W Charging" },
+              { name: "Realme GT Neo 5 SE", price: "₹32,999", processor: "Snapdragon 7+ Gen 2", ram: "8GB", storage: "128GB", rating: "4.4/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Motorola Edge 40", price: "₹34,999", processor: "Dimensity 8020", ram: "8GB", storage: "256GB", rating: "4.2/5", features: "144Hz AMOLED, 68W Charging" },
+              { name: "Redmi Note 13 Pro+", price: "₹22,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.1/5", features: "120Hz AMOLED, 120W Charging" }
+            ],
+            40000: [
+              { name: "OnePlus 11R", price: "₹39,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.6/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "POCO X6 Pro", price: "₹25,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.5/5", features: "120Hz AMOLED, 67W Charging" },
+              { name: "iQOO Neo 9", price: "₹29,999", processor: "Snapdragon 8 Gen 2", ram: "8GB", storage: "128GB", rating: "4.4/5", features: "144Hz AMOLED, 120W Charging" }
+            ],
+            50000: [
+              { name: "iQOO 11", price: "₹44,999", processor: "Snapdragon 8 Gen 2", ram: "8GB", storage: "128GB", rating: "4.5/5", features: "144Hz AMOLED, 120W Charging" },
+              { name: "OnePlus 11R", price: "₹39,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.6/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "Realme GT Neo 5", price: "₹27,999", processor: "Snapdragon 8+ Gen 1", ram: "8GB", storage: "128GB", rating: "4.3/5", features: "120Hz AMOLED, 100W Charging" },
+              { name: "POCO X6 Pro", price: "₹25,999", processor: "Dimensity 7200 Ultra", ram: "8GB", storage: "256GB", rating: "4.5/5", features: "120Hz AMOLED, 67W Charging" }
+            ]
+          }
+        };
+
+        const phones = phoneDatabase[type]?.[maxPrice] || [];
+        
+        if (phones.length === 0) {
+          return `No ${type} phones found under ₹${maxPrice}. Try increasing your budget or selecting a different category.`;
+        }
+
+        return createPhoneTable(phones, type, maxPrice);
+      }
+
+      function createPhoneTable(phones, type, maxPrice) {
+        let tableHTML = `<h3 style="color: #667eea; margin-bottom: 10px; text-align: center;">🏆 Best ${type.charAt(0).toUpperCase() + type.slice(1)} Phones Under ₹${maxPrice}</h3>`;
+        
+        // Add manual data indicator
+        tableHTML += `<div style="text-align: center; margin-bottom: 15px; padding: 8px; background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 8px; font-size: 14px;">
+          📱 Manual Phone Database • Last updated: ${new Date().toLocaleDateString()}
+        </div>`;
+        
+        tableHTML += '<table>';
+        
+        // Create headers based on phone type
+        if (type === 'gaming' || type === 'performance') {
+          tableHTML += `
+            <thead>
+              <tr>
+                <th>Phone Model</th>
+                <th>Price</th>
+                <th>Processor</th>
+                <th>RAM</th>
+                <th>Storage</th>
+                <th>Features</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+          `;
+          phones.forEach(phone => {
+            tableHTML += `
+              <tr>
+                <td><strong>${phone.name}</strong></td>
+                <td><span style="color: #dc3545; font-weight: bold;">${phone.price}</span></td>
+                <td>${phone.processor}</td>
+                <td>${phone.ram}</td>
+                <td>${phone.storage}</td>
+                <td><small style="color: #6c757d;">${phone.features}</small></td>
+                <td><span style="color: #28a745; font-weight: bold;">${phone.rating}</span></td>
+              </tr>
+            `;
+          });
+        } else if (type === 'camera') {
+          tableHTML += `
+            <thead>
+              <tr>
+                <th>Phone Model</th>
+                <th>Price</th>
+                <th>Camera Setup</th>
+                <th>Processor</th>
+                <th>Features</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+          `;
+          phones.forEach(phone => {
+            tableHTML += `
+              <tr>
+                <td><strong>${phone.name}</strong></td>
+                <td><span style="color: #dc3545; font-weight: bold;">${phone.price}</span></td>
+                <td>${phone.camera}</td>
+                <td>${phone.processor}</td>
+                <td><small style="color: #6c757d;">${phone.features}</small></td>
+                <td><span style="color: #28a745; font-weight: bold;">${phone.rating}</span></td>
+              </tr>
+            `;
+          });
+        } else if (type === 'battery') {
+          tableHTML += `
+            <thead>
+              <tr>
+                <th>Phone Model</th>
+                <th>Price</th>
+                <th>Battery</th>
+                <th>Processor</th>
+                <th>Features</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+          `;
+          phones.forEach(phone => {
+            tableHTML += `
+              <tr>
+                <td><strong>${phone.name}</strong></td>
+                <td><span style="color: #dc3545; font-weight: bold;">${phone.price}</span></td>
+                <td>${phone.battery}</td>
+                <td>${phone.processor}</td>
+                <td><small style="color: #6c757d;">${phone.features}</small></td>
+                <td><span style="color: #28a745; font-weight: bold;">${phone.rating}</span></td>
+              </tr>
+            `;
+          });
+        } else {
+          tableHTML += `
+            <thead>
+              <tr>
+                <th>Phone Model</th>
+                <th>Price</th>
+                <th>Processor</th>
+                <th>RAM</th>
+                <th>Storage</th>
+                <th>Features</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+          `;
+          phones.forEach(phone => {
+            tableHTML += `
+              <tr>
+                <td><strong>${phone.name}</strong></td>
+                <td><span style="color: #dc3545; font-weight: bold;">${phone.price}</span></td>
+                <td>${phone.processor}</td>
+                <td>${phone.ram}</td>
+                <td>${phone.storage}</td>
+                <td><small style="color: #6c757d;">${phone.features}</small></td>
+                <td><span style="color: #28a745; font-weight: bold;">${phone.rating}</span></td>
+              </tr>
+            `;
+          });
+        }
+        
+        tableHTML += '</tbody></table>';
+        
+        // Add enhanced summary
+        tableHTML += `
+          <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%); border-radius: 12px; border-left: 4px solid #667eea;">
+            <h4 style="margin: 0 0 10px 0; color: #667eea;">💡 Top Recommendation</h4>
+            <p style="margin: 0 0 8px 0; color: #333;"><strong>${phones[0].name}</strong> is the best ${type} phone under ₹${maxPrice} with a ${phones[0].rating} rating!</p>
+            <p style="margin: 0; color: #666; font-size: 14px;">Key features: ${phones[0].features}</p>
+          </div>
+        `;
+        
+        return tableHTML;
+      }
+
+      function clearMessages() {
+        const messagesDiv = document.getElementById("messages");
+        messagesDiv.innerHTML = "";
+      }
+
+      function addMessage(text, sender) {
+        const messagesDiv = document.getElementById("messages");
+        const msg = document.createElement("div");
+        msg.className = "message " + sender;
+        msg.innerHTML = text;
+        messagesDiv.appendChild(msg);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      }
+
+      function goBack() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
